@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Animal } from 'src/types/animal';
+import { LikedService } from '../services/liked.service';
 
 @Component({
   selector: 'app-zoo-animal',
@@ -7,10 +8,9 @@ import { Animal } from 'src/types/animal';
   styleUrls: ['./zoo-animal.component.css']
 })
 export class ZooAnimalComponent implements OnInit {
-  @Input() animal:Animal;
-  @Output() liked = new EventEmitter();   
+  @Input() animal:Animal;   
 
-  constructor() { 
+  constructor(private likedAnimals: LikedService) { 
     this.animal = {
       id: 1,
       name: '',
@@ -20,6 +20,10 @@ export class ZooAnimalComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  addToLiked(animal:Animal) {
+      this.likedAnimals.addToLikedAnimals(animal)
   }
 
 }
