@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { animal } from 'src/types/animal';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about',

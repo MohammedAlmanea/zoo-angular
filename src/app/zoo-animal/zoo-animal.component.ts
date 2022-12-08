@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { animal } from 'src/types/animal';
+import { Animal } from 'src/types/animal';
 
 @Component({
   selector: 'app-zoo-animal',
@@ -7,7 +7,7 @@ import { animal } from 'src/types/animal';
   styleUrls: ['./zoo-animal.component.css']
 })
 export class ZooAnimalComponent implements OnInit {
-  @Input() animal:animal;
+  @Input() animal:Animal;
   @Output() liked = new EventEmitter();   
 
   constructor() { 
