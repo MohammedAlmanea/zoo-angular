@@ -17,9 +17,4 @@ export class ZooComponent implements OnInit {
   ngOnInit(): void {
     this.animalList = this.animalListService.getAnimals();
   }
-
-  onLike(animal:Animal): void {
-    alert(`I like ${animal.name}`);
-  }
-
 }
