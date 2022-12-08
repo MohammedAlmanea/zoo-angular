@@ -1,2 +1,10 @@
-<h3>This is the information page </h3>
+<h3>More Information about the animals </h3>
+<ul *ngFor="let animal of animalsList">
+    <li>Name: {{animal.name}}</li>
+    <li *ngIf="animal.fed">The {{animal.name}} is fed!</li>
+    <li *ngIf="!animal.fed">The {{animal.name}} is not fed!</li>
+    <li>Id: {{animal.id}}</li>
+    <li>{{animal.info}}</li>
+    <hr>
+</ul>
 <a routerLink="/">Go Back</a>
