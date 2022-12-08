@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { animal } from 'src/types/animal';
 
 @Component({
@@ -8,12 +8,14 @@ import { animal } from 'src/types/animal';
 })
 export class ZooAnimalComponent implements OnInit {
   @Input() animal:animal;
+  @Output() liked = new EventEmitter();   
 
   constructor() { 
     this.animal = {
       id: 1,
       name: '',
-      fed: false
+      fed: false,
+      info: ''
     };
   }
 
