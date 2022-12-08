@@ -1,5 +1,6 @@
-export type animal = {
+export type Animal = {
     id: number,
     name: string,
-    fed: boolean
+    fed: boolean,
+    info: string
 }
