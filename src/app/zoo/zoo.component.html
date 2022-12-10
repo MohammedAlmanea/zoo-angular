@@ -1,2 +1,6 @@
 <h1>List of Animals</h1>
+<div>
 <app-zoo-animal *ngFor="let animal of animalList" [animal]="animal"></app-zoo-animal>
+</div>
+<app-create-animal  (addAnimal)="addAnimal($event)"></app-create-animal>
+    
