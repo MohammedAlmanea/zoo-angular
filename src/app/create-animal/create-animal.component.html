@@ -1,0 +1,12 @@
+<form #form ="ngForm" (ngSubmit)="submitForm()">
+    <h3>Create an Animal!</h3>
+    <input type="text" name="name" required maxlength="16" placeholder="Enter the Animal name" [(ngModel)]= 'name'>
+    <br>
+    <input type="text" #fedd="ngModel" name="fed" required minlength="4" maxlength="4" placeholder="true,false" [(ngModel)]= 'fed'>
+    <br>
+    <input type="submit" [disabled]="form.invalid" value="Submit" class = 'btn btn-primary'>
+</form>
+
+<div *ngIf="fedd.invalid">
+    Please answer with true or false
+</div>
