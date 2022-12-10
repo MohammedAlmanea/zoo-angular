@@ -8,6 +8,10 @@ import { ZooAnimalComponent } from './zoo-animal/zoo-animal.component';
 import { AboutComponent } from './about/about.component';
 import { LikedPageComponent } from './liked-page/liked-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UsersComponent } from './users/users.component';
+import { FormsModule } from '@angular/forms';
+import { CreateAnimalComponent } from './create-animal/create-animal.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,15 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     ZooAnimalComponent,
     AboutComponent,
     LikedPageComponent,
-    NavBarComponent
+    NavBarComponent,
+    UsersComponent,
+    CreateAnimalComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
